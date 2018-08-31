@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
-import { Row, Col, Jumbotron } from 'reactstrap';
+import { Row, Col, Jumbotron, Media} from 'reactstrap';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 class Resume extends Component {
@@ -24,12 +24,18 @@ class Resume extends Component {
         return(
             <Container>
                 <Jumbotron>
+                    <Row></Row>
+                    <Col></Col>
+                    <Media>
+                        <img className="img-fluid" src="portrait.jpg" alt="Portrait"/>
+                    </Media>
                     <h1 className="display-5">Lennard Austrup</h1>
                     <p className="lead">
                         Merianweg 31<br/>
                         40724 Hilden<br/>
                         Lennard.Austrup&#64;gmx.de
                     </p>
+
                 </Jumbotron>
                 <Button
                     color="dark" style={{marginBottom: '2em'}}
@@ -68,10 +74,10 @@ class Resume extends Component {
                 <TransitionGroup>
                 {items.map(({id, name}) => (
                     <CSSTransition key={id} timeout={500} classNames="fade">
-                        <Row>
+                        <Row className="resumeDateRow">
                             <Col xs="4">{id}</Col>
-                            <Col xs="7">{name}</Col>
-                            <Col xs="1">
+                            <Col xs="6">{name}</Col>
+                            <Col xs="2">
                                 <Button
                                     className="remove-btn"
                                     color="danger"
