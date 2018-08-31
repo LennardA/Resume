@@ -24,19 +24,24 @@ class Resume extends Component {
         return(
             <Container>
                 <Jumbotron>
-                    <Row></Row>
-                    <Col></Col>
-                    <Media>
-                        <img className="img-fluid" src="portrait.jpg" alt="Portrait"/>
-                    </Media>
-                    <h1 className="display-5">Lennard Austrup</h1>
-                    <p className="lead">
-                        Merianweg 31<br/>
-                        40724 Hilden<br/>
-                        Lennard.Austrup&#64;gmx.de
-                    </p>
-
+                    <Row>
+                        <Col xs="8">
+                            <h1 className="display-5">Lennard Austrup</h1>
+                            <p className="lead">
+                                Merianweg 31<br/>
+                                40724 Hilden<br/>
+                                Lennard.Austrup&#64;gmx.de
+                            </p>
+                        </Col>
+                        <Col xs="4">
+                            <Media>
+                            <img className="img-fluid" src="portrait.jpg" alt="Portrait"/>
+                            </Media>
+                        </Col>
+                    </Row>
                 </Jumbotron>
+
+
                 <Button
                     color="dark" style={{marginBottom: '2em'}}
                     onClick={() => { const name = prompt('Eingabe');
@@ -49,28 +54,7 @@ class Resume extends Component {
                 >Abschnitt hinzufügen
                 </Button>
 
-                <ListGroup>
-                    <TransitionGroup>
-                        {items.map(({id, name}) => (
-                            <CSSTransition key={id} timeout={500} classNames="fade">
-                                <ListGroupItem>
-                                    {name}
-                                    <Button
-                                        className="remove-btn"
-                                        color="danger"
-                                        size="sm"
-                                        onClick={() => {
-                                            this.setState(state => ({
-                                                items: state.items.filter(item => item.id !== id)
-                                            }));
-                                        }}
-                                    >&times;
-                                    </Button>
-                                </ListGroupItem>
-                            </CSSTransition>
-                        ))}
-                    </TransitionGroup>
-                </ListGroup>
+
                 <TransitionGroup>
                 {items.map(({id, name}) => (
                     <CSSTransition key={id} timeout={500} classNames="fade">
