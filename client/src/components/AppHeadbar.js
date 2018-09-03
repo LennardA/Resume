@@ -10,7 +10,7 @@ import  {
     NavLink,
     NavItem
 
-} from 'reactstrap'
+} from 'reactstrap';
 
 class AppHeadbar extends Component {
 
@@ -18,15 +18,11 @@ class AppHeadbar extends Component {
         isOpen: false
     };
 
-    constructor(props){
-        super(props);
-    }
-
     toggle = () => {
         this.setState({
             isOpen: !this.state.isOpen
         });
-    }
+    };
 
     render(){
         return (
@@ -46,7 +42,7 @@ class AppHeadbar extends Component {
                 </Navbar>
             </div>
         );
-    }
+    };
 }
 
 export default AppHeadbar;
