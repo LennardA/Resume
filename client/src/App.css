@@ -1,6 +1,19 @@
+.jumbotron {
+  padding: 2rem 2rem;
+}
+
 .resumeDateRow {
   margin-top: 1em;
 }
+
+.resumeDateCol {
+  text-align: right;
+  font-weight: bold;
+  color: #777;
+  padding-right: 20px;
+  border-right: 1px solid #aaa;
+}
+
 .fade-enter {
   opacity:0.01;
 }
@@ -17,4 +30,8 @@
 .fade-exit-active {
   opacity: 0.01;
   transition: opacity 500ms ease-out;
+}
+
+.portraitPicture {
+  max-height: 18em;
 }

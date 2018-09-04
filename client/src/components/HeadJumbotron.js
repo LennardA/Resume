@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Jumbotron, Row, Col, Media } from 'reactstrap';
+import { Jumbotron, Row, Col } from 'reactstrap';
 
 
 class HeadJumbotron extends Component {
@@ -18,7 +18,7 @@ class HeadJumbotron extends Component {
                         </p>
                     </Col>
                     <Col xs="4">
-                        <img className="img-fluid" src="portrait.jpg" alt="Portrait"/>
+                        <img className="img-fluid portraitPicture" src="portrait.jpg" alt="Portrait"/>
                     </Col>
                 </Row>
             </Jumbotron>

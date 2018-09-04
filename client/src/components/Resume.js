@@ -26,10 +26,11 @@ class Resume extends Component {
                 {items.map(({_id, name, date, description}) => (
                     <CSSTransition key={_id} timeout={500} classNames="fade">
                         <Row className="resumeDateRow">
-                            <Col xs="4">{name}</Col>
+                            <Col xs="4" className="resumeDateCol">{name}</Col>
                             <Col xs="6">{description}</Col>
                             <Col xs="2">
-                                <Button
+                                <Button outline
+                                    style={{borderWidth: 0}}
                                     className="remove-btn"
                                     color="danger"
                                     size="sm"
