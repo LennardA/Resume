@@ -17,6 +17,7 @@ mongoose
     .then(() => console.log("Database Connected"))
     .catch(err => console.log(err));
 
+
 // USE routes
 app.use('/api/items', items);
 
@@ -29,7 +30,6 @@ if (process.env.NODE_ENV === 'production'){
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
-
 
 const port = process.env.PORT || 5000;
 

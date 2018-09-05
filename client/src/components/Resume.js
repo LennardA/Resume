@@ -5,7 +5,7 @@ import { Row, Col } from 'reactstrap';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import { connect } from 'react-redux';
 import { getItems, deleteItem } from "../actions/itemActions";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 class Resume extends Component {
 
@@ -23,7 +23,7 @@ class Resume extends Component {
         return(
             <Container>
                 <TransitionGroup>
-                {items.map(({_id, name, date, description}) => (
+                    {items.map(({_id, name, date, description}) => (
                     <CSSTransition key={_id} timeout={500} classNames="fade">
                         <Row className="resumeDateRow">
                             <Col xs="4" className="resumeDateCol">{name}</Col>
