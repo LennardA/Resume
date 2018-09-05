@@ -3,6 +3,10 @@ const router = express.Router();
 
 const Item = require('../../models/items');
 
+
+// @route  GET api/items
+// @desc   Get All Items
+// @access Public
 // GET
 router.get('/', (req, res) => {
     Item.find()
